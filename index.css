@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+/* General */
+
+:root {
+  /* Colors */
+  --dark-purple: #4d1e49;
+  --gray-nickle: #bcbcbb;
+
+  /* Used Colors  */
+  --header-background-color: var(--dark-purple);
+  --about-container-background-color: #3a2b3a;
+  --about-info-container-background-color: rgba(255, 255, 255, 0.7);
+  --contact-form-background-color: var(--gray-nickle);
+  --footer-background-color: #414446;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+p {
+  margin: 1rem;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(92, 63, 148, 0.1);
+  -ms-overflow-style: none; /* Hide scroll bar for IE and Edge */
+  scrollbar-width: none; /* Hide scroll bar for Firefox */
+  font-family: "Cabin", sans-serif;
+  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* Hide scroll bar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utility Classes */
+
+/* Lists */
+
+.list-items {
+  list-style: none;
+}
+
+/* Containers */
+.container {
+  margin: 4rem;
+  border: solid black 2px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+/* Heading Container */
+
+.heading-container {
+  width: 100%;
+  height: 4rem;
+}
+.heading-container h2 {
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.heading-container h4 {
+  font-size: 0.8rem;
+}
+
+/* Titles */
+
+.heading-color-purple {
+  background-color: rgb(102, 44, 122);
+  margin: 0;
+  padding: 1rem;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 0;
+}
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.slideshow img {
+  display: none;
+}
+
+.slideshow__button-left {
+  position: absolute;
+  top: 45%;
+  left: 0%;
+}
+
+.slideshow__button-right {
+  position: absolute;
+  top: 45%;
+  right: 0%;
+}
+
+/* Navigation/Header */
+
+.main-header {
+  grid-area: header;
+  background-color: var(--header-background-color);
+}
+
+.main-header-nav {
+  width: 100%;
+}
+
+.main-header-nav__items {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.main-header-nav__item {
+  margin: 1rem;
+}
+
+.main-header-nav__item a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+}
+
+.main-header-nav__item a:hover,
+.main-header-nav__item a:active {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  grid-area: main;
+}
+
+/* About */
+
+.about-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "about-heading"
+    "about-bio"
+    "about-info-grid"
+    "about-prof-info";
+  padding: 1rem;
+}
+
+.about__heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  grid-area: about-heading;
+  margin-bottom: 4rem;
+}
+
+.about__img {
+  border-radius: 180%;
+  height: 450px;
+  width: 400px;
+}
+
+.about__name {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.about__subtitle {
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.about__info {
+  display: grid;
+  grid-area: about-info-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "about-contact-info about-hobby-info";
+}
+
+/* About Contact */
+
+.about__contact-info-container {
+  grid-area: about-contact-info;
+}
+
+.about__contact-title {
+  text-align: center;
+}
+
+.about__contact-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "birthdate-label birthdate"
+    "address-label address"
+    "residence-label residence"
+    "email-label email"
+    "phonenumber-label phonenumber";
+}
+
+.about__contact-info h2 {
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.about__birthdate-label {
+  grid-area: birthdate-label;
+}
+
+.about__birthdate {
+  grid-area: birthdate;
+}
+
+.about__address-label {
+  grid-area: address-label;
+}
+
+.about__address {
+  grid-area: address;
+}
+
+.about__residence-label {
+  grid-area: residence-label;
+}
+
+.about__residence {
+  grid-area: residence;
+}
+
+.about__email-label {
+  grid-area: email-label;
+}
+
+.about__email {
+  grid-area: email;
+}
+
+.about__phonenumber-label {
+  grid-area: phonenumber-label;
+}
+
+.about__phonenumber {
+  grid-area: phonenumber;
+}
+
+/* About Hobby */
+
+.about__hobby-info-container {
+  grid-area: about-hobby-info;
+}
+
+.about__hobby-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.about__hobby-items {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.about__hobby-item {
+  padding: 1.5rem;
+  display: inline-block;
+}
+
+/* About Bio */
+
+.about__bio-container {
+  grid-area: about-bio;
+}
+
+.about__bio-title {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.about__bio-text {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* About Profesional Info */
+
+.about__info-professional-container {
+  grid-area: about-prof-info;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "education-info work-info";
+}
+
+/* About Education */
+
+.about__education-container {
+  grid-area: education-info;
+  text-align: center;
+}
+
+.about__education-item h2 {
+  margin: 0;
+}
+
+.about__education-item h3 {
+  margin-top: 0;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+/* About Work */
+
+.about__work-container {
+  grid-area: work-info;
+  text-align: center;
+}
+
+.about__work-item h2 {
+  margin: 0;
+}
+
+.about__work-item h3 {
+  margin-top: 0;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+/* Skill Set */
+
+.skill-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "skill-header skill-header"
+    "skill-soft skill-hard"
+    "skill-programming-language skill-programming-language"
+    "skill-programming-tech skill-programming-tech";
+}
+
+.skill__title {
+  grid-area: skill-header;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Soft and Hard Skills */
+
+.skill__soft-container {
+  grid-area: skill-soft;
+}
+
+.skill__hard-container {
+  grid-area: skill-hard;
+}
+
+.skill__items {
+  padding: 0 0.8rem;
+}
+
+/* Skill Programming Languages */
+
+.skill__programming-language-container {
+  grid-area: skill-programming-language;
+}
+
+.skill__programming-language-item-title {
+  margin: 0;
+}
+
+.skill__programming-language-items {
+  padding: 0 1rem;
+}
+
+.skill__programming-language-item {
+  margin: 1rem 0;
+}
+
+.skill__programming-language-item-progress-bar-container {
+  border: solid black 2px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill__programming-language-item-progress-bar-container div {
+  background: rgb(188, 157, 230);
+  height: 1rem;
+}
+
+.progress-html {
+  width: 90%;
+}
+
+.progress-css {
+  width: 80%;
+}
+
+.progress-javascript {
+  width: 80%;
+}
+
+.progress-csharp {
+  width: 55%;
+}
+
+.progress-python {
+  width: 55%;
+}
+
+/* Skill Technologie / Software etc */
+
+.skill__technologie-container {
+  grid-area: skill-programming-tech;
+}
+
+.skill__technologie-skill-container {
+  display: flex;
+}
+
+.skill__technologie-skill-img {
+  margin: 1rem;
+  width: 400px;
+  height: 250px;
+}
+
+.skill__technologie-skill-text {
+  margin: 1rem;
+}
+
+/* Projects */
+
+.projects__title {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* .projects__project-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "project-title project-title"
+    "project-slideshow project-slideshow"
+    "project-images project-images"
+    "project-text project-icons";
+} */
+
+/* .projects__project-title {
+  grid-area: project-title;
+} */
+
+.projects__project-container {
+  text-align: center;
+}
+
+.projects__images-container {
+  display: flex;
+  /* grid-area: project-images; */
+}
+
+.projects__project-img {
+  width: 25%;
+  height: auto;
+}
+
+.projects__project-text {
+  /* grid-area: project-text; */
+  margin: 1rem;
+}
+
+.projects__project-icons {
+  /* grid-area: project-icons; */
+  font-size: 4rem;
+  text-align: end;
+}
+
+.projects__project-icons a {
+  text-decoration: none;
+  color: black;
+}
+
+.projects__project-icons a:hover,
+.projects__project-icons a:active {
+  color: var(--dark-purple);
+}
+
+/* Contact */
+.contact-section {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.contact-section__title {
+  font-size: 2rem;
+  margin-top: 5rem;
+}
+
+.contact-form {
+  margin: 0 auto;
+  max-width: 880px;
+  height: 480px;
+  text-align: left;
+  background-color: var(--contact-form-background-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border: solid #44195e 2px;
+  border-radius: 25px;
+}
+
+.contact-form div {
+  width: 80%;
+}
+
+.contact-form label {
+  display: block;
+  font-family: "Cabin", sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+}
+
+.contact-form button {
+  width: 40%;
+  height: 10%;
+  border-radius: 25px;
+  background-color: #44195e;
+  color: white;
+  margin: 1rem 0;
+}
+
+.contact-form button:hover,
+.contact-form button:active {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.contact-form__contact-info-container {
+  display: flex;
+}
+
+.contact-form__contact-info-container div {
+  margin: 1rem;
+  width: 50%;
+}
+
+.contact-form__subject-container {
+  padding: 1rem;
+}
+
+.contact-form__message-container {
+  padding: 1rem;
+}
+
+/* Footer */
+
+.main-footer {
+  grid-area: footer;
+  background-color: var(--footer-background-color);
+}
+
+.main-footer-nav {
+  height: 8rem;
+}
+
+.main-footer-nav__items {
+  height: inherit;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-footer-nav__item a {
+  color: white;
+  text-decoration: none;
+  padding: 0 0.8rem;
+}
+
+.main-footer-nav__item a:hover,
+.main-footer-nav__item a:active {
+  text-decoration: underline;
+}
