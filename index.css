@@ -35,7 +35,7 @@ body {
   height: 100%;
   margin: 0;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 3.5rem 1fr auto;
   grid-template-areas:
     "header"
     "main"
@@ -65,6 +65,11 @@ body::-webkit-scrollbar {
   margin: 4rem;
   border: solid black 2px;
   box-shadow: 5px 10px 8px #888888;
+}
+
+.container--half-sized {
+  min-width: 500px;
+  max-width: 776px;
 }
 
 /* Heading Container */
@@ -129,6 +134,9 @@ body::-webkit-scrollbar {
 .main-header {
   grid-area: header;
   background-color: var(--header-background-color);
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
 }
 
 .main-header-nav {
@@ -166,12 +174,11 @@ main {
 
 .about-container {
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
     "about-heading"
     "about-bio"
-    "about-info-grid"
-    "about-prof-info";
+    "about-info-grid";
   padding: 1rem;
 }
 
@@ -201,11 +208,33 @@ main {
   padding: 0;
 }
 
+/* About Bio */
+
+.about__bio-container {
+  grid-area: about-bio;
+}
+
+.about__bio-title {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.about__bio-text {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* About Info */
+
 .about__info {
   display: grid;
   grid-area: about-info-grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "about-contact-info about-hobby-info";
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "about-contact-info about-hobby-info"
+    "about-education-info about-work-info";
+  margin: 0 auto;
 }
 
 /* About Contact */
@@ -296,35 +325,10 @@ main {
   display: inline-block;
 }
 
-/* About Bio */
-
-.about__bio-container {
-  grid-area: about-bio;
-}
-
-.about__bio-title {
-  text-align: center;
-  margin-top: 5rem;
-}
-
-.about__bio-text {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-/* About Profesional Info */
-
-.about__info-professional-container {
-  grid-area: about-prof-info;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "education-info work-info";
-}
-
 /* About Education */
 
 .about__education-container {
-  grid-area: education-info;
+  grid-area: about-education-info;
   text-align: center;
 }
 
@@ -341,7 +345,7 @@ main {
 /* About Work */
 
 .about__work-container {
-  grid-area: work-info;
+  grid-area: about-work-info;
   text-align: center;
 }
 
@@ -500,6 +504,7 @@ main {
 .projects__title {
   text-align: center;
   margin-top: 5rem;
+  font-size: 2rem;
 }
 
 .projects-container {

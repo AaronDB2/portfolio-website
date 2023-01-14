@@ -55,7 +55,7 @@
         <!-- About Info -->
         <div class="about__info">
           <!-- About Contact Info -->
-          <div class="about__contact-info-container container">
+          <div class="about__contact-info-container container container--half-sized">
             <div class="heading-color-purple heading-container">
               <h2 class="about__contact-title">Gegevens</h2>
             </div>
@@ -73,7 +73,7 @@
             </address>
           </div>
           <!-- About Hobby Info -->
-          <div class="about__hobby-info-container container">
+          <div class="about__hobby-info-container container container--half-sized">
             <div class="heading-color-purple heading-container">
               <h2 class="about__hobby-title heading-color-purple">Hobby's</h2>
             </div>
@@ -84,11 +84,8 @@
               <li class="about__hobby-item"><i class="fa-solid fa-dumbbell"></i> Fitnessen </li>
             </ul>
           </div>
-        </div>
-        <!-- About Professional Info -->
-        <div class="about__info-professional-container">
           <!-- About Education -->
-          <div class="about__education-container container">
+          <div class="about__education-container container container--half-sized">
             <h1 class="about__education-title heading-color-purple">Opleidingen</h1>
             <ul class="about__education-items list-items">
               <li class="about__education-item">
@@ -102,7 +99,7 @@
             </ul>
           </div>
           <!-- About Work -->
-          <div class="about__work-container container">
+          <div class="about__work-container container container--half-sized">
             <h1 class="about__work-title heading-color-purple">Werk Ervaring</h1>
             <ul class="about__work-items list-items">
               <li class="about__work-item">
@@ -241,40 +238,42 @@
         </div>
       </div>
       <!-- Projects -->
-      <h1 class="projects__title">Projecten</h1>
-      <div class="projects-container" id="projects">
-        <!-- Natours -->
-        <div class="projects__project-container container">
-          <h2 class="projects__project-title heading-color-purple">Natours</h2>
-          <div class="slideshow">
-            <div class="slideshow__images" data-current-index="0">
-              <img src="/images/natours-home-page.png" alt="natours home page image">
-              <img src="/images/natours-tour-reviews.jpg" alt="natours tour reviews image">
-              <img src="/images/natours-profile-page.png" alt="natours profile page image">
-              <img src="/images/natours-login-page.png" alt="natours login page image">
+      <section class="projects__section" id="projects">
+        <h1 class="projects__title">Projecten</h1>
+        <div class="projects-container">
+          <!-- Natours -->
+          <div class="projects__project-container container">
+            <h2 class="projects__project-title heading-color-purple">Natours</h2>
+            <div class="slideshow">
+              <div class="slideshow__images" data-current-index="0">
+                <img src="/images/natours-home-page.png" alt="natours home page image">
+                <img src="/images/natours-tour-reviews.jpg" alt="natours tour reviews image">
+                <img src="/images/natours-profile-page.png" alt="natours profile page image">
+                <img src="/images/natours-login-page.png" alt="natours login page image">
+              </div>
+              <span class="slideshow__button-left" onclick="nextSlideshow(event, -1)">&#10094;</span>
+              <span class="slideshow__button-right" onclick="nextSlideshow(event, 1)">&#10095;</span>
             </div>
-            <span class="slideshow__button-left" onclick="nextSlideshow(event, -1)">&#10094;</span>
-            <span class="slideshow__button-right" onclick="nextSlideshow(event, 1)">&#10095;</span>
+            <p class="projects__project-text">Natours is een project dat ik gebouwd heb met behulp van de Udemy course: Node.js, Express, MongoDB & More: The Complete Bootcamp 2023. Natours is een webapplicatie waar gebruikers toeren kunnen boeken. De Natours API is volgens het REST model gemaakt. Gebruikers kunnen registreren en inloggen, toeren bekijken/boeken, reviews schrijven over de toeren en hun profiel bewerken. De authenticatie wordt gedaan met JWT tokens. De frontend van de applicatie is server side rendered met behulp van pug templates en de backend is gemaakt in nodejs met express en voor de database mongodb.</p>
+            <span class="projects__project-icons"><a href="https://github.com/AaronDB2/Natours" target="_blank"><i class="fa-brands fa-github"></i></a></span>
           </div>
-          <p class="projects__project-text">Natours is een project dat ik gebouwd heb met behulp van de Udemy course: Node.js, Express, MongoDB & More: The Complete Bootcamp 2023. Natours is een webapplicatie waar gebruikers toeren kunnen boeken. De Natours API is volgens het REST model gemaakt. Gebruikers kunnen registreren en inloggen, toeren bekijken/boeken, reviews schrijven over de toeren en hun profiel bewerken. De authenticatie wordt gedaan met JWT tokens. De frontend van de applicatie is server side rendered met behulp van pug templates en de backend is gemaakt in nodejs met express en voor de database mongodb.</p>
-          <span class="projects__project-icons"><a href="https://github.com/AaronDB2/Natours" target="_blank"><i class="fa-brands fa-github"></i></a></span>
-        </div>
-        <!-- Japero -->
-        <div class="projects__project-container container">
-          <h2 class="projects__project-title heading-color-purple">Japero</h2>
-          <div class="slideshow">
-            <div class="slideshow__images" data-current-index="0">
-              <img src="/images/japero-home.png" alt="japero home page image">
-              <img src="/images/japero-collegas.png" alt="japero collegas reviews image">
-              <img src="/images/japero-contact.png" alt="japero contact page image">
+          <!-- Japero -->
+          <div class="projects__project-container container">
+            <h2 class="projects__project-title heading-color-purple">Japero</h2>
+            <div class="slideshow">
+              <div class="slideshow__images" data-current-index="0">
+                <img src="/images/japero-home.png" alt="japero home page image">
+                <img src="/images/japero-collegas.png" alt="japero collegas reviews image">
+                <img src="/images/japero-contact.png" alt="japero contact page image">
+              </div>
+              <span class="slideshow__button-left" onclick="nextSlideshow(event, -1)">&#10094;</span>
+              <span class="slideshow__button-right" onclick="nextSlideshow(event, 1)">&#10095;</span>
             </div>
-            <span class="slideshow__button-left" onclick="nextSlideshow(event, -1)">&#10094;</span>
-            <span class="slideshow__button-right" onclick="nextSlideshow(event, 1)">&#10095;</span>
+            <p class="projects__project-text">Voor western manege Japero in Friesland Berlikum heb ik een website gemaakt. Deze website is gemaakt met Wordpress zodat de manege zelf hun teksten en foto’s gemakkelijk kunnen aanpassen. De website is gemaakt om de manege online vindbaar te maken en om bezoekers van de website te informeren over wat de manege te bieden heeft. aangezien er geen geavanceerde eisen waren voor de website heb ik ervoor gezorgd dat de website zo goedkoop mogelijk is gemaakt zodat er geen extra kosten waren voor plugins.</p>
+            <span class="projects__project-icons"><a href="https://japero.nl/" target="_blank"><img src="/images/japero-logo.jpeg" alt=""></a></span>
           </div>
-          <p class="projects__project-text">Voor western manege Japero in Friesland Berlikum heb ik een website gemaakt. Deze website is gemaakt met Wordpress zodat de manege zelf hun teksten en foto’s gemakkelijk kunnen aanpassen. De website is gemaakt om de manege online vindbaar te maken en om bezoekers van de website te informeren over wat de manege te bieden heeft. aangezien er geen geavanceerde eisen waren voor de website heb ik ervoor gezorgd dat de website zo goedkoop mogelijk is gemaakt zodat er geen extra kosten waren voor plugins.</p>
-          <span class="projects__project-icons"><a href="https://japero.nl/" target="_blank"><img src="/images/japero-logo.jpeg" alt=""></a></span>
         </div>
-      </div>
+      </section>
       <!-- Contact -->
       <section class="contact-section" id="contact">
         <h1 class="contact-section__title">Contact</h1>
