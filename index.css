@@ -446,7 +446,7 @@ main {
 .skill__technologie-container {
   grid-area: skill-programming-tech;
   display: grid;
-  grid-template-columns: 0.5fr 3fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: auto auto;
   grid-template-areas:
     "techologie-header techologie-header"
@@ -491,12 +491,18 @@ main {
   grid-area: technologie-display;
 }
 
+.skill__technologie-display div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .skill__technologie {
   margin: 0.5rem auto;
 }
 
 .skill__technologie-img {
   object-fit: contain;
+  max-width: 400px;
 }
 
 /* Projects */
