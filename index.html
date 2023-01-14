@@ -204,35 +204,75 @@
         <!-- Programming Technologies/Software etc -->
         <div class="skill__technologie-container container">
           <h2 class="skill__technologie-title heading-color-purple">Technologie en Software</h2>
-          <div class="skill__technologie-skill-container">
-            <img class="skill__technologie-skill-img" src="/images/nodejs-logo.png" alt="nodejs logo">
-            <p class="skill__technologie-skill-text">Ik schrijf mijn backend vaak in Nodejs. Ik vind het fijn om met nodejs te werken omdat ik zo maar 1 taal hoef te gebruiken voor de frontend en de backend. Daarnaast heeft nodejs ook een ruime keuze aan verschillende libraries zoals Express en Axios om development te versnellen.</p>
+          <div class="skill__technologie-subject-container">
+            <h2 class="skill__technologie-subject-title">Onderwerpen:</h2>
+            <ul class="skill__technologie-subject-items list-items">
+              <li class="skill__technologie-subject-item active" data-subject="frontend" onclick="clickSubject(event)">Frontend</li>
+              <li class="skill__technologie-subject-item" data-subject="backend" onclick="clickSubject(event)">Backend</li>
+              <li class="skill__technologie-subject-item" data-subject="general" onclick="clickSubject(event)">Algemeen</li>
+            </ul>
+          </div>
+          <div class="skill__technologie-display">
+            <div class="skill__technologie-frontend" data-subject="frontend">
+              <div class="skill__technologie">
+                <img class="skill__technologie-img" src="/images/webpack-logo.png" alt="test" width="600px" height="500px">
+              </div>
+            </div>
+            <div class="skill__technologie-backend" data-subject="backend">
+              <div class="skill__technologie">
+                <img class="skill__technologie-img" src="/images/nodejs-logo.png" alt="test" width="600px" height="500px">
+              </div>
+              <div class="skill__technologie">
+                <img class="skill__technologie-img" src="/images/MongoDB_Logo.png" alt="test" width="600px" height="500px">
+              </div>
+            </div>
+            <div class="skill__technologie-general" data-subject="general">
+              <div class="skill__technologie">
+                <img class="skill__technologie-img" src="/images/git-bash-logo.png" alt="test" width="600px" height="500px">
+              </div>
+              <div class="skill__technologie">
+                <img class="skill__technologie-img" src="/images/postman-logo.png" alt="test" width="600px" height="500px">
+              </div>
+              <div class="skill__technologie">
+                <img class="skill__technologie-img" src="/images/vs-code-logo.png" alt="test" width="600px" height="500px">
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <!-- Projects -->
+      <h1 class="projects__title">Projecten</h1>
       <div class="projects-container" id="projects">
-        <h1 class="projects__title">Projecten</h1>
+        <!-- Natours -->
         <div class="projects__project-container container">
-          <h2 class="projects__project-title heading-color-purple">Test Project</h2>
+          <h2 class="projects__project-title heading-color-purple">Natours</h2>
           <div class="slideshow">
-            <div class="slideshow__images">
-              <img src="/images/natours-home-page.png" alt="test" width="1000px">
-              <img src="/images/natours-tour-reviews.jpg" alt="test" width="1000px">
-              <img src="/images/natours-profile-page.png" alt="test" width="1000px">
-              <img src="/images/natours-login-page.png" alt="test" width="1000px">
+            <div class="slideshow__images" data-current-index="0">
+              <img src="/images/natours-home-page.png" alt="natours home page image">
+              <img src="/images/natours-tour-reviews.jpg" alt="natours tour reviews image">
+              <img src="/images/natours-profile-page.png" alt="natours profile page image">
+              <img src="/images/natours-login-page.png" alt="natours login page image">
             </div>
-            <span class="slideshow__button-left" onclick="prevSlideshow()">&#10094;</span>
-            <span class="slideshow__button-right" onclick="nextSlideshow()">&#10095;</span>
+            <span class="slideshow__button-left" onclick="nextSlideshow(event, -1)">&#10094;</span>
+            <span class="slideshow__button-right" onclick="nextSlideshow(event, 1)">&#10095;</span>
           </div>
-          <div class="projects__images-container">
-            <img class="projects__project-img" src="/images/natours-login-page.png" alt="test">
-            <img class="projects__project-img" src="/images/natours-home-page.png" alt="test">
-            <img class="projects__project-img" src="/images/natours-profile-page.png" alt="test">
-            <img class="projects__project-img" src="/images/natours-tour-reviews.jpg" alt="test">
-          </div>
-          <p class="projects__project-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          <p class="projects__project-text">Natours is een project dat ik gebouwd heb met behulp van de Udemy course: Node.js, Express, MongoDB & More: The Complete Bootcamp 2023. Natours is een webapplicatie waar gebruikers toeren kunnen boeken. De Natours API is volgens het REST model gemaakt. Gebruikers kunnen registreren en inloggen, toeren bekijken/boeken, reviews schrijven over de toeren en hun profiel bewerken. De authenticatie wordt gedaan met JWT tokens. De frontend van de applicatie is server side rendered met behulp van pug templates en de backend is gemaakt in nodejs met express en voor de database mongodb.</p>
           <span class="projects__project-icons"><a href="https://github.com/AaronDB2/Natours" target="_blank"><i class="fa-brands fa-github"></i></a></span>
+        </div>
+        <!-- Japero -->
+        <div class="projects__project-container container">
+          <h2 class="projects__project-title heading-color-purple">Japero</h2>
+          <div class="slideshow">
+            <div class="slideshow__images" data-current-index="0">
+              <img src="/images/japero-home.png" alt="japero home page image">
+              <img src="/images/japero-collegas.png" alt="japero collegas reviews image">
+              <img src="/images/japero-contact.png" alt="japero contact page image">
+            </div>
+            <span class="slideshow__button-left" onclick="nextSlideshow(event, -1)">&#10094;</span>
+            <span class="slideshow__button-right" onclick="nextSlideshow(event, 1)">&#10095;</span>
+          </div>
+          <p class="projects__project-text">Voor western manege Japero in Friesland Berlikum heb ik een website gemaakt. Deze website is gemaakt met Wordpress zodat de manege zelf hun teksten en foto’s gemakkelijk kunnen aanpassen. De website is gemaakt om de manege online vindbaar te maken en om bezoekers van de website te informeren over wat de manege te bieden heeft. aangezien er geen geavanceerde eisen waren voor de website heb ik ervoor gezorgd dat de website zo goedkoop mogelijk is gemaakt zodat er geen extra kosten waren voor plugins.</p>
+          <span class="projects__project-icons"><a href="https://japero.nl/" target="_blank"><img src="/images/japero-logo.jpeg" alt=""></a></span>
         </div>
       </div>
       <!-- Contact -->
@@ -280,6 +320,6 @@
         </ul>
       </nav>
     </footer>
-    <script src="/js/index.js"></script>
+    <script src="/js/index.js" type="module"></script>
   </body>
 </html>

@@ -49,6 +49,11 @@ body::-webkit-scrollbar {
 
 /* Utility Classes */
 
+.active {
+  color: grey;
+  transform: scale(1.2);
+}
+
 /* Lists */
 
 .list-items {
@@ -92,6 +97,7 @@ body::-webkit-scrollbar {
 }
 
 /* Slideshow */
+
 .slideshow {
   position: relative;
   display: inline-block;
@@ -100,6 +106,10 @@ body::-webkit-scrollbar {
 
 .slideshow img {
   display: none;
+  object-fit: contain;
+  float: left;
+  width: 1000px;
+  height: 500px;
 }
 
 .slideshow__button-left {
@@ -431,20 +441,58 @@ main {
 
 .skill__technologie-container {
   grid-area: skill-programming-tech;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "techologie-header techologie-header"
+    "techologie-subjects technologie-display";
 }
 
-.skill__technologie-skill-container {
+.skill__technologie-title {
+  grid-area: techologie-header;
+}
+
+.skill__technologie-subject-container {
+  grid-area: techologie-subjects;
   display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(118, 52, 139, 0.9);
 }
 
-.skill__technologie-skill-img {
-  margin: 1rem;
-  width: 400px;
-  height: 250px;
+.skill__technologie-subject-title {
+  font-size: 2rem;
 }
 
-.skill__technologie-skill-text {
-  margin: 1rem;
+.skill__technologie-subject-items {
+  padding: 0;
+}
+
+.skill__technologie-subject-item {
+  margin: 2rem;
+  font-size: 1.8rem;
+}
+
+.skill__technologie-subject-item:hover,
+.skill__technologie-subject-item:active {
+  color: grey;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.skill__technologie-display {
+  grid-area: technologie-display;
+}
+
+.skill__technologie {
+  margin: 0.5rem auto;
+}
+
+.skill__technologie-img {
+  object-fit: contain;
 }
 
 /* Projects */
@@ -454,44 +502,28 @@ main {
   margin-top: 5rem;
 }
 
-/* .projects__project-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas:
-    "project-title project-title"
-    "project-slideshow project-slideshow"
-    "project-images project-images"
-    "project-text project-icons";
-} */
-
-/* .projects__project-title {
-  grid-area: project-title;
-} */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .projects__project-container {
-  text-align: center;
-}
-
-.projects__images-container {
   display: flex;
-  /* grid-area: project-images; */
-}
-
-.projects__project-img {
-  width: 25%;
-  height: auto;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
 }
 
 .projects__project-text {
-  /* grid-area: project-text; */
-  margin: 1rem;
+  text-align: left;
+  margin: 1rem 0.5rem;
+  width: 1000px;
+  flex-grow: 1;
 }
 
 .projects__project-icons {
-  /* grid-area: project-icons; */
   font-size: 4rem;
-  text-align: end;
 }
 
 .projects__project-icons a {
