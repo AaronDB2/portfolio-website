@@ -153,6 +153,38 @@ body::-webkit-scrollbar {
   margin: 0 0.5rem;
 }
 
+/* Mobile Naviagtion */
+.mobile-nav {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: none;
+}
+
+.mobile-nav__items {
+  font-size: 2rem;
+  margin: auto;
+  width: 50%;
+  padding: 0;
+}
+
+.mobile-nav__item {
+  margin: 2rem 0;
+}
+
+.mobile-nav__item a {
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
+  background-color: grey;
+  color: white;
+}
+
+/* Navigation/Desktop */
+
 .main-header-nav__items {
   /* display: flex; */
   justify-content: flex-start;

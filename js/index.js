@@ -1,7 +1,10 @@
+import { showMobileNav } from "./mobileNav.js";
 import { initSlideshow } from "./slideshow.js";
 import { showDisplay } from "./showDisplay.js";
 
 // Get elements
+const hamburgerMenuIcon = document.querySelector(".fa-bars");
+const mobileNav = document.querySelector(".mobile-nav");
 const technologieSubjectBtns = document.querySelectorAll(
   ".skill__technologie-subject-item"
 );
@@ -28,6 +31,17 @@ function clickSubject(e) {
   showDisplay(subject, technologieDisplay);
 }
 window.clickSubject = clickSubject;
+
+// Event Listeners
+hamburgerMenuIcon.addEventListener("click", () => {
+  showMobileNav(mobileNav);
+});
+
+Array.from(mobileNav.children[0].children).forEach((link) =>
+  link.addEventListener("click", () => {
+    showMobileNav(mobileNav);
+  })
+);
 
 // Run at start
 // ------------------------------------------------------------------------------------------
