@@ -48,21 +48,18 @@ body::-webkit-scrollbar {
 }
 
 /* Utility Classes */
-
 .active {
   color: grey;
   transform: scale(1.2);
 }
 
 /* Lists */
-
 .list-items {
   list-style: none;
 }
 
 /* Containers */
 .container {
-  /* margin: 4rem; */
   margin: 4rem 0;
   border: solid black 2px;
   box-shadow: 5px 10px 8px #888888;
@@ -74,7 +71,6 @@ body::-webkit-scrollbar {
 }
 
 /* Heading Container */
-
 .heading-container {
   width: 100%;
   height: 4rem;
@@ -90,7 +86,6 @@ body::-webkit-scrollbar {
 }
 
 /* Titles */
-
 .heading-color-purple {
   background-color: rgb(102, 44, 122);
   margin: 0;
@@ -103,11 +98,9 @@ body::-webkit-scrollbar {
 }
 
 /* Slideshow */
-
 .slideshow {
   position: relative;
   display: inline-block;
-  /* display: none; */
   font-size: 3rem;
 }
 
@@ -115,8 +108,6 @@ body::-webkit-scrollbar {
   display: none;
   object-fit: contain;
   float: left;
-  width: 1000px;
-  height: 500px;
 }
 
 .slideshow__button-left {
@@ -132,7 +123,6 @@ body::-webkit-scrollbar {
 }
 
 /* Navigation/Header */
-
 .main-header {
   grid-area: header;
   background-color: var(--header-background-color);
@@ -184,9 +174,7 @@ body::-webkit-scrollbar {
 }
 
 /* Navigation/Desktop */
-
 .main-header-nav__items {
-  /* display: flex; */
   justify-content: flex-start;
   margin: 0;
   display: none;
@@ -214,29 +202,16 @@ main {
 }
 
 /* About */
-
 .about-container {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  /* display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "about-heading"
-    "about-bio"
-    "about-info-grid"; */
-  /* padding: 1rem; */
   padding: 1rem 0;
 }
 
 .about__heading {
-  /* display: flex;
-  align-items: center;
-  flex-direction: column; */
   text-align: center;
   width: 100vw;
-  /* grid-area: about-heading;
-  margin-bottom: 4rem; */
 }
 
 .about__img {
@@ -256,34 +231,19 @@ main {
 }
 
 /* About Bio */
-
-.about__bio-container {
-  /* grid-area: about-bio; */
-}
-
 .about__bio-title {
   text-align: center;
   margin-top: 5rem;
 }
 
 .about__bio-text {
-  /* text-align: center; */
   margin-bottom: 5rem;
 }
 
 /* About Info */
-
 .about__info {
   display: flex;
   flex-direction: column;
-  /* display: grid;
-  grid-area: about-info-grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "about-contact-info about-hobby-info"
-    "about-education-info about-work-info";
-  margin: 0 auto; */
 }
 
 .about__info div {
@@ -291,10 +251,6 @@ main {
 }
 
 /* About Contact */
-.about__contact-info-container {
-  /* grid-area: about-contact-info; */
-}
-
 .about__contact-title {
   text-align: center;
 }
@@ -302,15 +258,6 @@ main {
 .about__contact-info {
   display: flex;
   flex-direction: column;
-  /* display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: repeat(5, auto);
-  grid-template-areas:
-    "birthdate-label birthdate"
-    "address-label address"
-    "residence-label residence"
-    "email-label email"
-    "phonenumber-label phonenumber"; */
 }
 
 .about__contact-info h2 {
@@ -318,52 +265,7 @@ main {
   padding-left: 0.5rem;
 }
 
-/* .about__birthdate-label {
-  grid-area: birthdate-label;
-}
-
-.about__birthdate {
-  grid-area: birthdate;
-}
-
-.about__address-label {
-  grid-area: address-label;
-}
-
-.about__address {
-  grid-area: address;
-}
-
-.about__residence-label {
-  grid-area: residence-label;
-}
-
-.about__residence {
-  grid-area: residence;
-}
-
-.about__email-label {
-  grid-area: email-label;
-}
-
-.about__email {
-  grid-area: email;
-}
-
-.about__phonenumber-label {
-  grid-area: phonenumber-label;
-}
-
-.about__phonenumber {
-  grid-area: phonenumber;
-} */
-
 /* About Hobby */
-
-.about__hobby-info-container {
-  /* grid-area: about-hobby-info; */
-}
-
 .about__hobby-title {
   font-size: 1.5rem;
   text-align: center;
@@ -372,18 +274,14 @@ main {
 .about__hobby-items {
   font-size: 1.5rem;
   padding: 0;
-  /* text-align: center; */
 }
 
 .about__hobby-item {
   padding: 1.5rem;
-  /* display: inline-block; */
 }
 
 /* About Education */
-
 .about__education-container {
-  /* grid-area: about-education-info; */
   text-align: center;
 }
 
@@ -406,9 +304,7 @@ main {
 }
 
 /* About Work */
-
 .about__work-container {
-  /* grid-area: about-work-info; */
   text-align: center;
 }
 
@@ -431,36 +327,23 @@ main {
 }
 
 /* Skill Set */
-
 .skill-container {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  /* display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas:
-    "skill-header skill-header"
-    "skill-soft skill-hard"
-    "skill-programming-language skill-programming-language"
-    "skill-programming-tech skill-programming-tech"; */
 }
 
 .skill__title {
-  /* grid-area: skill-header; */
   text-align: center;
   margin-top: 5rem;
 }
 
 /* Soft and Hard Skills */
-
 .skill__soft-container {
-  /* grid-area: skill-soft; */
   text-align: center;
 }
 
 .skill__hard-container {
-  /* grid-area: skill-hard; */
   text-align: center;
 }
 
@@ -469,11 +352,6 @@ main {
 }
 
 /* Skill Programming Languages */
-
-/* .skill__programming-language-container {
-  grid-area: skill-programming-language;
-} */
-
 .skill__programming-language-item-title {
   margin: 0;
 }
@@ -518,24 +396,11 @@ main {
 }
 
 /* Skill Technologie / Software etc */
-
 .skill__technologie-container {
   text-align: center;
-  /* grid-area: skill-programming-tech;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "techologie-header techologie-header"
-    "techologie-subjects technologie-display"; */
 }
 
-/* .skill__technologie-title {
-  grid-area: techologie-header;
-} */
-
 .skill__technologie-subject-container {
-  /* grid-area: techologie-subjects; */
   display: flex;
   align-items: center;
   text-align: center;
@@ -565,14 +430,9 @@ main {
   cursor: pointer;
 }
 
-/* .skill__technologie-display {
-  grid-area: technologie-display;
-} */
-
 .skill__technologie-display div {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
 }
 
 .skill__technologie {
@@ -583,11 +443,9 @@ main {
   width: auto;
   height: 50px;
   object-fit: contain;
-  /* max-width: 400px; */
 }
 
 /* Projects */
-
 .projects__section {
   width: 100vw;
 }
@@ -602,7 +460,6 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* flex-wrap: wrap; */
 }
 
 .projects__project-container {
@@ -620,8 +477,6 @@ main {
 .projects__project-text {
   text-align: left;
   margin: 1rem 0.5rem;
-  /* width: 1000px;
-  flex-grow: 1; */
 }
 
 .projects__project-icons {
@@ -711,7 +566,6 @@ main {
 }
 
 /* Footer */
-
 .main-footer {
   grid-area: footer;
   background-color: var(--footer-background-color);
@@ -744,12 +598,240 @@ main {
 
 /* Media Query for desktop */
 @media (min-width: 64rem) {
+  /* Utility Classes */
+  .container {
+    margin: 4rem;
+  }
   /* Navigation */
+
+  .main-header-nav__hamburger-menu i {
+    display: none;
+  }
+
   .main-header-nav__items {
     display: flex;
   }
 
   /* About */
   .about-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "about-heading"
+      "about-bio"
+      "about-info-grid";
+    padding: 1rem;
+  }
+
+  .about__heading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-area: about-heading;
+    margin-bottom: 4rem;
+  }
+
+  /* About Bio */
+  .about__bio-container {
+    grid-area: about-bio;
+  }
+
+  .about__bio-text {
+    text-align: center;
+  }
+
+  /* About Info */
+  .about__info {
+    display: grid;
+    grid-area: about-info-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "about-contact-info about-hobby-info"
+      "about-education-info about-work-info";
+    margin: 0 auto;
+  }
+
+  /* About Contact */
+  .about__contact-info-container {
+    grid-area: about-contact-info;
+  }
+
+  .about__contact-title {
+    text-align: center;
+  }
+
+  .about__contact-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "birthdate-label birthdate"
+      "address-label address"
+      "residence-label residence"
+      "email-label email"
+      "phonenumber-label phonenumber";
+  }
+
+  .about__birthdate-label {
+    grid-area: birthdate-label;
+  }
+
+  .about__birthdate {
+    grid-area: birthdate;
+  }
+
+  .about__address-label {
+    grid-area: address-label;
+  }
+
+  .about__address {
+    grid-area: address;
+  }
+
+  .about__residence-label {
+    grid-area: residence-label;
+  }
+
+  .about__residence {
+    grid-area: residence;
+  }
+
+  .about__email-label {
+    grid-area: email-label;
+  }
+
+  .about__email {
+    grid-area: email;
+  }
+
+  .about__phonenumber-label {
+    grid-area: phonenumber-label;
+  }
+
+  .about__phonenumber {
+    grid-area: phonenumber;
+  }
+
+  /* About Hobby */
+  .about__hobby-info-container {
+    grid-area: about-hobby-info;
+  }
+
+  .about__hobby-items {
+    text-align: center;
+  }
+
+  .about__hobby-item {
+    display: inline-block;
+  }
+
+  /* About Education */
+  .about__education-container {
+    grid-area: about-education-info;
+  }
+
+  /* About Work */
+  .about__work-container {
+    grid-area: about-work-info;
+  }
+
+  /* About Work */
+  .about__work-container {
+    grid-area: about-work-info;
+  }
+
+  /* Skill Set */
+  .skill-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "skill-header skill-header"
+      "skill-soft skill-hard"
+      "skill-programming-language skill-programming-language"
+      "skill-programming-tech skill-programming-tech";
+  }
+
+  .skill__title {
+    grid-area: skill-header;
+  }
+
+  /* Soft and Hard Skills */
+  .skill__soft-container {
+    text-align: left;
+    max-width: 800px;
+    grid-area: skill-soft;
+    margin: 0 clamp(1rem, 25vw, 8rem);
+  }
+
+  .skill__hard-container {
+    text-align: left;
+    max-width: 800px;
+    grid-area: skill-hard;
+    margin: 0 clamp(1rem, 25vw, 8rem);
+  }
+
+  /* Skill Programming Languages */
+  .skill__programming-language-container {
+    grid-area: skill-programming-language;
+  }
+
+  /* Skill Technologie / Software etc */
+  .skill__technologie-container {
+    grid-area: skill-programming-tech;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "techologie-header techologie-header"
+      "techologie-subjects technologie-display";
+  }
+
+  .skill__technologie-title {
+    text-align: left;
+    grid-area: techologie-header;
+  }
+
+  .skill__technologie-subject-container {
+    grid-area: techologie-subjects;
+  }
+
+  .skill__technologie-display {
+    grid-area: technologie-display;
+  }
+
+  .skill__technologie-display div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .skill__technologie-img {
+    max-width: 400px;
+    height: 100px;
+  }
+
+  /* Projects */
+  .projects-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .projects__project-text {
+    width: 1000px;
+    flex-grow: 1;
+  }
+
+  .slideshow img {
+    width: 1000px;
+    height: 500px;
+  }
+
+  /* Footer */
+  .main-footer-nav__items {
+    min-height: 8rem;
+    flex-direction: row;
   }
 }
