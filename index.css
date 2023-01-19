@@ -62,7 +62,8 @@ body::-webkit-scrollbar {
 
 /* Containers */
 .container {
-  margin: 4rem;
+  /* margin: 4rem; */
+  margin: 4rem 0;
   border: solid black 2px;
   box-shadow: 5px 10px 8px #888888;
 }
@@ -106,6 +107,7 @@ body::-webkit-scrollbar {
 .slideshow {
   position: relative;
   display: inline-block;
+  /* display: none; */
   font-size: 3rem;
 }
 
@@ -141,12 +143,21 @@ body::-webkit-scrollbar {
 
 .main-header-nav {
   width: 100%;
+  display: flex;
+}
+
+.main-header-nav__hamburger-menu i {
+  font-size: 4rem;
+  color: white;
+  cursor: pointer;
+  margin: 0 0.5rem;
 }
 
 .main-header-nav__items {
-  display: flex;
+  /* display: flex; */
   justify-content: flex-start;
   margin: 0;
+  display: none;
 }
 
 .main-header-nav__item {
@@ -173,29 +184,33 @@ main {
 /* About */
 
 .about-container {
-  display: grid;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "about-heading"
     "about-bio"
-    "about-info-grid";
-  padding: 1rem;
+    "about-info-grid"; */
+  /* padding: 1rem; */
+  padding: 1rem 0;
 }
 
 .about__heading {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
   text-align: center;
-  width: 100%;
-  grid-area: about-heading;
-  margin-bottom: 4rem;
+  width: 100vw;
+  /* grid-area: about-heading;
+  margin-bottom: 4rem; */
 }
 
 .about__img {
   border-radius: 180%;
-  height: 450px;
-  width: 400px;
+  height: 400px;
+  width: auto;
 }
 
 .about__name {
@@ -211,7 +226,7 @@ main {
 /* About Bio */
 
 .about__bio-container {
-  grid-area: about-bio;
+  /* grid-area: about-bio; */
 }
 
 .about__bio-title {
@@ -220,27 +235,32 @@ main {
 }
 
 .about__bio-text {
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 5rem;
 }
 
 /* About Info */
 
 .about__info {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
   grid-area: about-info-grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
     "about-contact-info about-hobby-info"
     "about-education-info about-work-info";
-  margin: 0 auto;
+  margin: 0 auto; */
+}
+
+.about__info div {
+  min-width: auto;
 }
 
 /* About Contact */
-
 .about__contact-info-container {
-  grid-area: about-contact-info;
+  /* grid-area: about-contact-info; */
 }
 
 .about__contact-title {
@@ -248,7 +268,9 @@ main {
 }
 
 .about__contact-info {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: repeat(5, auto);
   grid-template-areas:
@@ -256,7 +278,7 @@ main {
     "address-label address"
     "residence-label residence"
     "email-label email"
-    "phonenumber-label phonenumber";
+    "phonenumber-label phonenumber"; */
 }
 
 .about__contact-info h2 {
@@ -264,7 +286,7 @@ main {
   padding-left: 0.5rem;
 }
 
-.about__birthdate-label {
+/* .about__birthdate-label {
   grid-area: birthdate-label;
 }
 
@@ -302,12 +324,12 @@ main {
 
 .about__phonenumber {
   grid-area: phonenumber;
-}
+} */
 
 /* About Hobby */
 
 .about__hobby-info-container {
-  grid-area: about-hobby-info;
+  /* grid-area: about-hobby-info; */
 }
 
 .about__hobby-title {
@@ -317,19 +339,28 @@ main {
 
 .about__hobby-items {
   font-size: 1.5rem;
-  text-align: center;
+  padding: 0;
+  /* text-align: center; */
 }
 
 .about__hobby-item {
   padding: 1.5rem;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 /* About Education */
 
 .about__education-container {
-  grid-area: about-education-info;
+  /* grid-area: about-education-info; */
   text-align: center;
+}
+
+.about__education-items {
+  padding: 0;
+}
+
+.about__education-item {
+  padding: 1.5rem;
 }
 
 .about__education-item h2 {
@@ -345,8 +376,16 @@ main {
 /* About Work */
 
 .about__work-container {
-  grid-area: about-work-info;
+  /* grid-area: about-work-info; */
   text-align: center;
+}
+
+.about__work-items {
+  padding: 0;
+}
+
+.about__work-item {
+  padding: 1.5rem;
 }
 
 .about__work-item h2 {
@@ -362,18 +401,21 @@ main {
 /* Skill Set */
 
 .skill-container {
-  display: grid;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "skill-header skill-header"
     "skill-soft skill-hard"
     "skill-programming-language skill-programming-language"
-    "skill-programming-tech skill-programming-tech";
+    "skill-programming-tech skill-programming-tech"; */
 }
 
 .skill__title {
-  grid-area: skill-header;
+  /* grid-area: skill-header; */
   text-align: center;
   margin-top: 5rem;
 }
@@ -381,11 +423,13 @@ main {
 /* Soft and Hard Skills */
 
 .skill__soft-container {
-  grid-area: skill-soft;
+  /* grid-area: skill-soft; */
+  text-align: center;
 }
 
 .skill__hard-container {
-  grid-area: skill-hard;
+  /* grid-area: skill-hard; */
+  text-align: center;
 }
 
 .skill__items {
@@ -394,9 +438,9 @@ main {
 
 /* Skill Programming Languages */
 
-.skill__programming-language-container {
+/* .skill__programming-language-container {
   grid-area: skill-programming-language;
-}
+} */
 
 .skill__programming-language-item-title {
   margin: 0;
@@ -444,21 +488,22 @@ main {
 /* Skill Technologie / Software etc */
 
 .skill__technologie-container {
-  grid-area: skill-programming-tech;
+  text-align: center;
+  /* grid-area: skill-programming-tech;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto auto;
   grid-template-areas:
     "techologie-header techologie-header"
-    "techologie-subjects technologie-display";
+    "techologie-subjects technologie-display"; */
 }
 
-.skill__technologie-title {
+/* .skill__technologie-title {
   grid-area: techologie-header;
-}
+} */
 
 .skill__technologie-subject-container {
-  grid-area: techologie-subjects;
+  /* grid-area: techologie-subjects; */
   display: flex;
   align-items: center;
   text-align: center;
@@ -473,10 +518,11 @@ main {
 
 .skill__technologie-subject-items {
   padding: 0;
+  margin: 0;
 }
 
 .skill__technologie-subject-item {
-  margin: 2rem;
+  margin: 1rem;
   font-size: 1.8rem;
 }
 
@@ -487,13 +533,14 @@ main {
   cursor: pointer;
 }
 
-.skill__technologie-display {
+/* .skill__technologie-display {
   grid-area: technologie-display;
-}
+} */
 
 .skill__technologie-display div {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
 }
 
 .skill__technologie {
@@ -501,11 +548,17 @@ main {
 }
 
 .skill__technologie-img {
+  width: auto;
+  height: 50px;
   object-fit: contain;
-  max-width: 400px;
+  /* max-width: 400px; */
 }
 
 /* Projects */
+
+.projects__section {
+  width: 100vw;
+}
 
 .projects__title {
   text-align: center;
@@ -516,7 +569,8 @@ main {
 .projects-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
 }
 
 .projects__project-container {
@@ -526,11 +580,16 @@ main {
   width: fit-content;
 }
 
+.projects__slideshow-images img {
+  width: 100%;
+  height: auto;
+}
+
 .projects__project-text {
   text-align: left;
   margin: 1rem 0.5rem;
-  width: 1000px;
-  flex-grow: 1;
+  /* width: 1000px;
+  flex-grow: 1; */
 }
 
 .projects__project-icons {
@@ -561,7 +620,6 @@ main {
 .contact-form {
   margin: 0 auto;
   max-width: 880px;
-  height: 480px;
   text-align: left;
   background-color: var(--contact-form-background-color);
   display: flex;
@@ -627,16 +685,18 @@ main {
   background-color: var(--footer-background-color);
 }
 
-.main-footer-nav {
-  height: 8rem;
-}
-
 .main-footer-nav__items {
   height: inherit;
   margin: 0;
+  padding: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.main-footer-nav__item {
+  margin: 0.4rem;
 }
 
 .main-footer-nav__item a {
@@ -648,4 +708,16 @@ main {
 .main-footer-nav__item a:hover,
 .main-footer-nav__item a:active {
   text-decoration: underline;
+}
+
+/* Media Query for desktop */
+@media (min-width: 64rem) {
+  /* Navigation */
+  .main-header-nav__items {
+    display: flex;
+  }
+
+  /* About */
+  .about-container {
+  }
 }
