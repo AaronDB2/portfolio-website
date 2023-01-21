@@ -3,6 +3,7 @@ import { initSlideshow } from "./slideshow.js";
 import { showDisplay } from "./showDisplay.js";
 
 // Get elements
+const containers = document.querySelectorAll(".container");
 const hamburgerMenuIcon = document.querySelector(".fa-bars");
 const mobileNav = document.querySelector(".mobile-nav");
 const technologieSubjectBtns = document.querySelectorAll(
@@ -42,6 +43,19 @@ Array.from(mobileNav.children[0].children).forEach((link) =>
     showMobileNav(mobileNav);
   })
 );
+
+// Add fadeIn animation if entry is intersecting
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+    }
+  });
+});
+
+containers.forEach((container) => {
+  observer.observe(container);
+});
 
 // Run at start
 // ------------------------------------------------------------------------------------------

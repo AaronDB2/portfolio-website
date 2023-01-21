@@ -63,6 +63,8 @@ body::-webkit-scrollbar {
   margin: 4rem 0;
   border: solid black 2px;
   box-shadow: 5px 10px 8px #888888;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .container--half-sized {
@@ -175,7 +177,6 @@ body::-webkit-scrollbar {
 
 /* Navigation/Desktop */
 .main-header-nav__items {
-  justify-content: flex-start;
   margin: 0;
   display: none;
 }
@@ -194,6 +195,20 @@ body::-webkit-scrollbar {
 .main-header-nav__item a:hover,
 .main-header-nav__item a:active {
   text-decoration: underline;
+}
+
+.main-header-nav__social-icons {
+  font-size: 4rem;
+  padding: 0 2rem;
+  margin-left: auto;
+}
+
+.main-header-nav__social-icons a {
+  color: white;
+}
+
+.main-header-nav__social-icons a:hover {
+  color: grey;
 }
 
 /* Main */
@@ -745,13 +760,13 @@ main {
   /* Skill Set */
   .skill-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
     grid-template-areas:
-      "skill-header skill-header"
-      "skill-soft skill-hard"
-      "skill-programming-language skill-programming-language"
-      "skill-programming-tech skill-programming-tech";
+      "skill-header"
+      "skill-soft-hard"
+      "skill-programming-language"
+      "skill-programming-tech";
   }
 
   .skill__title {
@@ -759,18 +774,22 @@ main {
   }
 
   /* Soft and Hard Skills */
+  .skill__soft-hard-container {
+    grid-area: skill-soft-hard;
+    display: flex;
+    margin: auto;
+  }
+
   .skill__soft-container {
     text-align: left;
     max-width: 800px;
-    grid-area: skill-soft;
-    margin: 0 clamp(1rem, 25vw, 8rem);
+    flex: 1 1 0px;
   }
 
   .skill__hard-container {
     text-align: left;
     max-width: 800px;
-    grid-area: skill-hard;
-    margin: 0 clamp(1rem, 25vw, 8rem);
+    flex: 1 1 0px;
   }
 
   /* Skill Programming Languages */
