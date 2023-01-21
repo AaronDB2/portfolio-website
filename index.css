@@ -617,8 +617,8 @@ main {
   .container {
     margin: 4rem;
   }
-  /* Navigation */
 
+  /* Navigation */
   .main-header-nav__hamburger-menu i {
     display: none;
   }
@@ -654,6 +654,8 @@ main {
 
   .about__bio-text {
     text-align: center;
+    max-width: 60%;
+    margin: auto;
   }
 
   /* About Info */

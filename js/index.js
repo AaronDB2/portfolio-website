@@ -4,6 +4,9 @@ import { showDisplay } from "./showDisplay.js";
 
 // Get elements
 const containers = document.querySelectorAll(".container");
+const navSocialIconsContainer = document.querySelector(
+  ".main-header-nav__social-icons"
+);
 const hamburgerMenuIcon = document.querySelector(".fa-bars");
 const mobileNav = document.querySelector(".mobile-nav");
 const technologieSubjectBtns = document.querySelectorAll(
@@ -35,12 +38,12 @@ window.clickSubject = clickSubject;
 
 // Event Listeners
 hamburgerMenuIcon.addEventListener("click", () => {
-  showMobileNav(mobileNav);
+  showMobileNav(mobileNav, navSocialIconsContainer);
 });
 
 Array.from(mobileNav.children[0].children).forEach((link) =>
   link.addEventListener("click", () => {
-    showMobileNav(mobileNav);
+    showMobileNav(mobileNav, navSocialIconsContainer);
   })
 );
 
